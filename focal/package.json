@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@carbon/icons-react": "^11.19.0",
+    "@chakra-ui/icons": "^2.0.19",
     "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@leap-ai/sdk": "^0.0.119",
+    "axios": "^1.4.0",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
     "framer-motion": "^10.12.9",
