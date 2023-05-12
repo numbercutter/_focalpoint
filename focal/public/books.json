@@ -1,10 +1,13 @@
 [
     {
-        "title": "Harmonic Mindscapes",
-        "file": "/books/Harmonic Mindscapes.pdf"
+      "title": "Harmonic Mindscapes",
+      "file": "/books/Harmonic Mindscapes.pdf",
+      "cover": "/covers/harmonic-mindscape.webp"
     },
     {
-        "title": "The Inebriated Illusion",
-        "file": "/books/The Inebriated Illusion.pdf"
+      "title": "The Inebriated Illusion",
+      "file": "/books/The Inebriated Illusion.pdf",
+      "cover": "/covers/in_illusion.webp"
     }
-]
+  ]
+  

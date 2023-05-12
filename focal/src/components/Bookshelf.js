@@ -1,15 +1,20 @@
-import { Box, Grid, Text } from '@chakra-ui/react';
+import { Box, Grid, Text, Image, AspectRatio } from '@chakra-ui/react';
 import Link from 'next/link';
 
 const Bookshelf = ({ books }) => {
     return (
-        <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)'}} gap={6}>
+        <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)"]} gap={6}>
             {books.map((book, i) => (
-                <Link href={book.file} key={i}>
-                    <Box w="100%" h="200" bg="blue.500" color="white" p="4" rounded="md">
-                        <Text>{book.title}</Text>
-                    </Box>
-                </Link>
+                <Box as="a" w="100%" p="4" rounded="md" boxShadow="lg" overflow="hidden">
+                    <Link href={book.file} key={i} passHref>
+                        <Box bg="brand.200" color="brand.300" p="2" rounded="md" border="2px" borderColor="brand.100">
+                            <AspectRatio ratio={5.5 / 8.5} maxH="800px">
+                                <Image src={book.cover} alt={book.title} objectFit="contain" />
+                            </AspectRatio>
+                            <Text mt="2" color="black">{book.title}</Text>
+                        </Box>
+                    </Link>
+                </Box>
             ))}
         </Grid>
     );
