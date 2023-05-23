@@ -1,14 +1,35 @@
+// src/themes/theme.js
 import { extendTheme } from "@chakra-ui/react"
 
-const theme = extendTheme({
-  colors: {
-    brand: {
-      100: "#FF0077", // hot pink
-      200: "#6200FF", // red
-      300: "#C8FF00", // yellow
-      400: "#00FF55", // green
+const styles = {
+  global: {
+    body: {
+      color: "white",
+      bg: "brand.300",
+      fontFamily: "Arial, sans-serif",
+    },
+    a: {
+      color: "brand.500",
+      textDecoration: "none",
     },
   },
-})
+}
+
+const config = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+}
+
+const theme = extendTheme({
+  styles,
+  config,
+  colors: {
+    brand: {
+      500: "#D9FF00",
+      400: "#FF004C",
+      300: "#16131F",
+    },
+  },
+});
 
 export default theme;
