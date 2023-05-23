@@ -16,8 +16,9 @@ const QuoteComponent = ({ quote }) => {
     >
       <Box p="6">
         <Text fontSize="xl" textAlign="center">
-          "{quote.text}"
+          &quot;{quote.text}&quot;
         </Text>
+
         <Text mt="4" color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textAlign="center">
           {quote.author} &bull; {quote.source}
         </Text>
