@@ -5,8 +5,12 @@ const styles = {
   global: {
     body: {
       color: "white",
-      bg: "brand.300",
+      bg: "brand.500",
       fontFamily: "Arial, sans-serif",
+    },
+    p: {
+      color: "brand.400",
+      textDecoration: "none",
     },
     a: {
       color: "brand.500",
@@ -25,9 +29,9 @@ const theme = extendTheme({
   config,
   colors: {
     brand: {
-      500: "#D9FF00",
+      500: "#E5FF00",
       400: "#FF004C",
-      300: "#16131F",
+      300: "#000000",
     },
   },
 });

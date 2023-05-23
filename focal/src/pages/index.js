@@ -1,6 +1,6 @@
 // src/pages/index.js
 import { useEffect, useState } from 'react';
-import { Flex, VStack, Spinner } from '@chakra-ui/react';
+import { Grid, Spinner } from '@chakra-ui/react';
 import QuoteComponent from '../components/QuoteComponent';
 
 export default function HomePage() {
@@ -22,12 +22,14 @@ export default function HomePage() {
   }
 
   return (
-    <VStack spacing={8}>
+    <Grid
+      templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+      gap={6}
+      p={6} // padding
+    >
       {quotes.map(quote => (
-        <Flex key={quote.id} justifyContent="center" alignItems="center" width="100%">
-          <QuoteComponent quote={quote} />
-        </Flex>
+        <QuoteComponent key={quote.id} quote={quote} />
       ))}
-    </VStack>
+    </Grid>
   );
 }

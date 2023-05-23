@@ -3,7 +3,17 @@ import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react';
 
 const QuoteComponent = ({ quote }) => {
   return (
-    <LinkBox maxW="sm" mx="auto" borderWidth="1px" borderRadius="lg" overflow="hidden" p="6">
+    <LinkBox
+      maxW="sm"
+      mx="auto"
+      borderWidth="1px"
+      borderRadius="lg"
+      overflow="hidden"
+      p="6"
+      bg="brand.300"
+      transition="transform 0.3s"
+      _hover={{ transform: "scale(1.05)" }}
+    >
       <Box p="6">
         <Text fontSize="xl" textAlign="center">
           "{quote.text}"
